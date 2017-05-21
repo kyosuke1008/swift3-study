@@ -21,9 +21,188 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //第２章()
-        第3章()
+        //第3章()
+        //第4章()
         
+        
+        let strArray = ["a","b","c","d","e"]
+        let intArray = [1,2,3,4,5]
+        var boolArray = [true,true,false,false]
+        var tupleArray = [(0,0),(100,120),(180,200)]
+        
+        boolArray.append(true)
+        tupleArray[0] = (1,1)
+        
+        print(strArray)
+        print(intArray)
+        print(boolArray)
+        print(tupleArray)
+        
+        let color:[String] = ["red","blue","green"]
+        let numList:[Int] = [12,34,56,78,90]
+        var resultList:[Bool]
+        resultList = [true,false,true,false]
+        
+        let color2:Array<String> = ["red","blue","green"]
+        let numList2:Array<Int> = [12,34,56,78,90]
+        var resultList2:Array<Bool>
+        resultList2 = [true,false,true,false]
+        
+        print(color)
+        print(numList)
+        print(resultList)
+        print(color2)
+        print(numList2)
+        print(resultList2)
+        
+        var theArray = [1,2,3]
+        
+        theArray = []
+        
+        if theArray.isEmpty{
+        print("theArrayは空")
+        }
+        
+        let aArray = [11,22,33,44,55]
+        print(aArray.count)
+        
+        let zeroList = [Double](repeating:0.0,count:10)
+          let xList = [String](repeating:"未設定",count:5)
+        print(zeroList)
+        print(xList)
+        let numbers = [Int](-3...3)
+        print(numbers)
+        let numbers2 = Array<Int>(5...10)
+        print(numbers2)
+        
+        let basicCourse = ["ラン","スイム"]
+        let fullCourse = basicCourse + ["バイク","カヌー"]
+        
+        print(basicCourse)
+        print(fullCourse)
+        
+        let abcArray = ["a","b","c","d","e","f","g","h","i"]
+        let str1 = abcArray[0]
+        let str2 = abcArray[2]
+        let newArray = abcArray[4...6]
+        print(str1)
+        print(str2)
+        print(newArray)
+        
+        var theArray2 = ["a","b","c","d","e","f","g","h","i"]
+        theArray2[0] = "あ"
+        theArray2[2] = "いう"
+        theArray2[4...6] = ["赤","白","黄色","青","緑"]
+        print(theArray2)
+        
+        var nestArray = [["a1","a2","a3"],["b1","b2","b3"],["c1","c2","c3"]]
+        let theValue = nestArray[1][2]
+        nestArray[2][0] = "hello"
+        
+        print(theValue)
+        print(nestArray)
+        
+        var sum = 0
+        var min = Int.min
+        var max = Int.max
+        
+        for item in numArray
     }
+    
+    func 第4章()   {
+        let mwssage = "ハロー"
+        var bird:String
+        bird = "アマツバメ"
+        print(mwssage)
+        print(bird)
+        
+        let hello2 = String("ハロー") + String(2000+20)
+        print(hello2)
+        let emptyString = String()
+        print(emptyString)
+        var str = "Hello"
+        str = ""
+        print(str)
+        
+        hello41("")
+        hello41("田中")
+        
+        let stars = String(repeatElement("★", count: 10))
+        print(stars)
+        
+        let swift = "swiftとは\n\"雨燕\"です。"
+        print(swift)
+        
+        let str2 = "アイウエオ12345ABcde(^_^)"
+        print(str2.characters.count)
+        
+        let entries = 24
+        let staff = 3
+        
+        let str3 = "参加者\(entries)人"
+        let str4 = "スタッフ含めると\(entries + staff)人です。"
+        print(str3)
+        print(str4)
+        
+        let name1 = "海原"
+        let name2 = "雄山"
+        let str6 = name1 + name2 + "さん"
+        print(str6)
+        
+        let week = ["月","火","水","木","金","土","日"]
+        var oneweek = ""
+        for day in week{
+            oneweek += day
+        }
+        print(oneweek)
+        
+        let kakaku = "240"
+        let kosu = "2"
+        
+        let kingaku = Int(kakaku)! * Int(kosu)!
+        print(kingaku)
+        
+        let r = "20"
+        let pai = "3.14"
+        
+        let menseki = Double(r)!*Double(r)!*Double(pai)!
+        print(menseki)
+        
+        let nakami = 135.5
+        let package = 12.0
+        print("内容量："+String(nakami)+"g")
+        print("総重量："+String(nakami+package)+"g")
+        
+        let note = "Swift入門ノート"
+        let start = note.startIndex
+        let char = note[start]
+        
+        print("先頭の文字は"+String(char)+"です。")
+        
+        //インデックスを１つ進める
+        print(note[note.index(after: note.startIndex)])
+        //インデックスを１つ戻す
+        print(note[note.index(before: note.endIndex)])
+        //先頭から５文字目
+        print(note[note.index(note.startIndex,offsetBy: 5)])
+        //末尾から５文字目
+        print(note[note.index(note.endIndex,offsetBy: -4)])
+        
+        //String切り出し
+        let start1 = note.index(note.startIndex,offsetBy: 3)
+        let end1 = note.index(note.startIndex,offsetBy: 6)
+        
+        print((note[start1...end1],note[start1..<end1]))
+    }
+    
+    func hello41(_ who:String)  {
+        if who.isEmpty{
+        return
+        }
+        let msg = "ハロー！" + who + "さん"
+        print(msg)
+    }
+    
     func 第3章()  {
         let number = dice()
         print(number)
